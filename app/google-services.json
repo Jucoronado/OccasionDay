@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "332706891435",
+    "firebase_url": "https://occasionday-cb674.firebaseio.com",
+    "project_id": "occasionday-cb674",
+    "storage_bucket": "occasionday-cb674.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332706891435:android:b2acd5203b41513b5859ee",
+        "android_client_info": {
+          "package_name": "com.gicogu.occasionday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332706891435-a12rlkdjsncl36t1vuaiuqkn31mqv1kc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gicogu.occasionday",
+            "certificate_hash": "771e94bdc020ef6de8d1eb580b4044596d6de412"
+          }
+        },
+        {
+          "client_id": "332706891435-q1ahiqc023kastt70gtqvi0212sijjvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdaogTl9q5L4DA43mfk4fmX-cq_hcLg6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332706891435-q1ahiqc023kastt70gtqvi0212sijjvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332706891435:android:0c855916e66d769c5859ee",
+        "android_client_info": {
+          "package_name": "com.project.occasionday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332706891435-8fpqhd85e4vi91g3er2mhfr1j8km8ehl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.occasionday",
+            "certificate_hash": "771e94bdc020ef6de8d1eb580b4044596d6de412"
+          }
+        },
+        {
+          "client_id": "332706891435-q1ahiqc023kastt70gtqvi0212sijjvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdaogTl9q5L4DA43mfk4fmX-cq_hcLg6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332706891435-q1ahiqc023kastt70gtqvi0212sijjvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
