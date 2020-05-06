@@ -83,25 +83,34 @@ class Registrar : AppCompatActivity() {
     private fun fireusuario(correo: String, nombre: String, apellido: String, pass:String, usuario:String){
         val usu=usuario
         mAuth.createUserWithEmailAndPassword(correo,pass).addOnCompleteListener(this){
-                task ->
+                task1 ->
 
             val user:FirebaseUser?=mAuth.currentUser
-            mailverify(user)
+            //mailverify(user)
 
-            if(task.isSuccessful){
+            if(task1.isSuccessful){
+
+                user?.sendEmailVerification()?.addOnCompleteListener(this){ task->
+                    if(task.isComplete){
+                        val userBD=mreferencia.child(usu).child(user?.uid.toString())
+                        userBD.child("nombre").setValue(nombre)
+                        userBD.child("apellido").setValue(apellido)
+                        userBD.child("correo").setValue(correo)
+                        Toast.makeText(applicationContext, "Correo registradoo", Toast.LENGTH_SHORT).show()
+                        logIn()
+                    }else{
+                        Toast.makeText(applicationContext, "Correo No Registrado", Toast.LENGTH_SHORT).show()
+                    }
+                }
 
 
-                val userBD=mreferencia.child(usu).child(user?.uid.toString())
-                userBD.child("nombre").setValue(nombre)
-                userBD.child("apellido").setValue(apellido)
-                userBD.child("correo").setValue(correo)
-                logIn()
             }else {
-                Toast.makeText(applicationContext, "El usuario ya esta registrado como "+usu, Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "El usuario ya esta registrado", Toast.LENGTH_SHORT).show()
             }
-        }   }
+        }
+    }
 
-    private fun mailverify(user:FirebaseUser?){
+  /**  private fun mailverify(user:FirebaseUser?){
 
         user?.sendEmailVerification()?.addOnCompleteListener(this){ task->
             if(task.isComplete){
@@ -110,7 +119,7 @@ class Registrar : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Correo no registradoo", Toast.LENGTH_SHORT).show()
             }
         }
-    }
+    }*/
 
     private fun logIn(){
         Toast.makeText(applicationContext, "Gracias", Toast.LENGTH_SHORT).show()
