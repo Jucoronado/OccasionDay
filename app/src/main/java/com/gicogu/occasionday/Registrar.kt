@@ -85,9 +85,11 @@ class Registrar : AppCompatActivity() {
         mAuth.createUserWithEmailAndPassword(correo,pass).addOnCompleteListener(this){
                 task ->
 
-            if(task.isComplete){
-                val user:FirebaseUser?=mAuth.currentUser
-                mailverify(user)
+            val user:FirebaseUser?=mAuth.currentUser
+            mailverify(user)
+
+            if(task.isSuccessful){
+
 
                 val userBD=mreferencia.child(usu).child(user?.uid.toString())
                 userBD.child("nombre").setValue(nombre)
@@ -95,7 +97,7 @@ class Registrar : AppCompatActivity() {
                 userBD.child("correo").setValue(correo)
                 logIn()
             }else {
-                Toast.makeText(applicationContext, "No se pudeo registrar usuario", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "El usuario ya esta registrado como "+usu, Toast.LENGTH_SHORT).show()
             }
         }   }
 
