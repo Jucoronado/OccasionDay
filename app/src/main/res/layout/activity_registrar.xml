@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registrar">
+
+    <TextView
+        android:id="@+id/textoreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="REGISTRE LOS SIGUIENTES  DATOS PERSONALES"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/correoreg"
+        android:hint="Digite su Correo Electronico"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoreg" />
+
+    <EditText
+        android:id="@+id/nombreusu"
+        android:hint="Digite su nombre"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correoreg" />
+
+    <EditText
+        android:id="@+id/apelusu"
+        android:hint="Digite su apellido"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreusu" />
+
+    <EditText
+        android:id="@+id/clave"
+        android:hint="Digite su clave"
+        android:inputType="textPassword"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apelusu" />
+
+
+    <TextView
+        android:id="@+id/textoreg2"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="QUE TIPO DE USUARIO DESEA SER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clave"
+        android:layout_width="wrap_content"/>
+
+    <RadioGroup
+        android:id="@+id/grupo"
+        android:layout_width="243dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoreg2">
+
+        <RadioButton
+            android:id="@+id/clienter"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:text="CLIENTE" />
+
+        <RadioButton
+            android:id="@+id/socior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SOCIO" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btmReg"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="registro"
+        android:layout_marginEnd="15dp"
+        android:text="Registrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cancelar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupo"
+        app:layout_goneMarginEnd="30dp" />
+
+    <Button
+        android:id="@+id/cancelar"
+        android:onClick="cancelar"
+        android:text="Cancelar"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:background="@android:color/holo_green_light"
+        app:layout_goneMarginEnd="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
