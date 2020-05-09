@@ -84,13 +84,14 @@ class MainActivity : AppCompatActivity() {
     fun registrousu(vista: View){
         val intent = Intent( this@MainActivity, Registrar::class.java)
         startActivity(intent)
+        finish()
     }
 
     fun restablecer(vista: View){
 
         val intent = Intent( this@MainActivity, Restablecer::class.java)
         startActivity(intent)
-
+        finish()
     }
 
 
