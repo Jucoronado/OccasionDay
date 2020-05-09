@@ -12,6 +12,7 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,14 +34,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Ingresar"
         android:background="@android:color/holo_green_light"
+        android:onClick="logeo"
+        android:text="Ingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passlog" />
+        app:layout_constraintTop_toBottomOf="@+id/passlog"
+         />
 
     <RadioGroup
+        android:id="@+id/radiolog"
         android:layout_width="243dp"
         android:layout_height="23dp"
         android:layout_marginTop="30dp"
@@ -50,14 +54,14 @@
         app:layout_constraintTop_toBottomOf="@+id/btmlog">
 
         <RadioButton
-            android:id="@+id/cliente"
+            android:id="@+id/clienter"
             android:layout_width="122dp"
             android:layout_height="match_parent"
             android:checked="true"
             android:text="CLIENTE" />
 
         <RadioButton
-            android:id="@+id/socio"
+            android:id="@+id/socior"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SOCIO" />
@@ -65,16 +69,16 @@
 
     <Button
         android:id="@+id/btmReg"
-        android:onClick="registrousu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:text="Registrar Usuario"
-        android:background="@android:color/holo_green_light"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="10dp"
+        android:background="@android:color/holo_green_light"
+        android:onClick="registrousu"
+        android:text="Registrar Usuario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btmlog" />
 
@@ -92,4 +96,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btmReg" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
